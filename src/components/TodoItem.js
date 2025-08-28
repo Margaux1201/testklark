@@ -137,9 +137,9 @@ function TodoItem({ todo, onToggle, onDelete, onUpdate }) {
           <div className="todo-meta">
             <span
               className="priority-badge"
-              style={{ backgroundColor: getPriorityColor(todo.priority) }}
+              style={{ backgroundColor: getPriorityColor(todo.title.priority) }}
             >
-              {getPriorityLabel(todo.priority)}
+              {getPriorityLabel(todo.title.priority)}
             </span>
 
             {todo.dueDate && (
