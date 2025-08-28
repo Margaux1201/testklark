@@ -142,9 +142,10 @@ function TodoItem({ todo, onToggle, onDelete, onUpdate }) {
               {getPriorityLabel(todo.title.priority)}
             </span>
 
-            {todo.dueDate && (
+            {todo.title.dueDate && (
               <span className="due-date">
-                Échéance: {new Date(todo.dueDate).toLocaleDateString("fr-FR")}
+                Échéance:{" "}
+                {new Date(todo.title.dueDate).toLocaleDateString("fr-FR")}
               </span>
             )}
           </div>
